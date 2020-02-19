@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+header {
+  width: 100%;
+  height: var(--header);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 92px;
+  .logo {
+    height: var(--logoH);
+    width: var(--logoW);
+  }
+}
