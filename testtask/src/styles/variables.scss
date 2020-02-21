@@ -11,14 +11,15 @@ $grey: #bfbfbf;
 $backlight: lighten(#1890ff, 43%);
 
 :root {
-    //--head: 200px;
+    --primary-p: 92px;
     --header: 110px;
+    --footer: 68px;
     //--mobHeader: 40px;
     --logoH: 58px;
     --logoW: 219px;
-    // --footer: 80px;
+    --content: 630px;
     // --padding: 10px;
-    // --b-r: 4px;
+    --b-r: 4px;
     // --m-w: 400px;
     // --feedback: 70px;
     // --carousel: 450px;
@@ -26,9 +27,17 @@ $backlight: lighten(#1890ff, 43%);
     // --addresses: 450px;
     // --indent: 1em;
     //app size
-    --xl: 1200px;
-    --l: 1000px;
-    --m: 780px;
-    --s: 400px;
-    --xs: 300px;
+    // --xl: 1200px;
+    // --l: 1000px;
+    // --m: 780px;
+    // --s: 400px;
+    // --xs: 300px;
+}
+
+//mixins
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

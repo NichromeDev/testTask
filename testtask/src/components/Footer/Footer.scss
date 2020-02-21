@@ -1,1 +1,17 @@
 @import "../../styles/variables.scss";
+
+footer {
+  width: calc(100% - 2 * var(--primary-p));
+  padding: 0 var(--primary-p);
+  height: var(--footer);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  span {
+    font-family: Museo Sans Cyrl;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}

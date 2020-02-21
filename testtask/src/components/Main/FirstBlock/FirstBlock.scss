@@ -1,1 +1,108 @@
 @import "../../../styles/variables.scss";
+
+.block1 {
+  height: 960px;
+  background-image: url("../../../assets/img/bg_1.png");
+  width: calc(100% - 2 * var(--primary-p));
+  padding: 0 var(--primary-p);
+  .title {
+    padding-top: calc(var(--header) + 80px);
+    width: 820px;
+    height: 90px;
+    font-family: Bebas Neue;
+    font-size: 50px;
+    line-height: 90px;
+    text-transform: uppercase;
+    color: white;
+  }
+  .subtitle {
+    margin-top: 10px;
+    width: 633px;
+    height: 60px;
+    font-size: 50px;
+    line-height: 60px;
+    color: white;
+    font-family: Bebas Neue;
+    span {
+      font-family: Museo Sans Cyrl;
+      color: #ff3754;
+    }
+  }
+  .table {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    height: 280px;
+    .col {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .col1 {
+      width: 70px;
+      .row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .col2 {
+      width: 75px;
+      .row {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+    .col3 {
+      width: 360px;
+      .row {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: Museo Sans Cyrl;
+        font-size: 24px;
+        line-height: 29px;
+        color: $white;
+      }
+      .span {
+        width: 300px;
+        height: 50px;
+        background: #ff3754;
+        border-radius: var(--b-r);
+        font-family: Museo Sans Cyrl;
+        font-size: 36px;
+        line-height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+      }
+    }
+    .row {
+      height: 70px;
+    }
+  }
+  .button {
+    margin-top: 100px;
+    width: 412px;
+    height: 68px;
+    background: #ff3754;
+    border-radius: var(--b-r);
+    font-family: Museo Sans Cyrl;
+    font-size: 19px;
+    line-height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.155em;
+    text-transform: uppercase;
+    color: $white;
+    cursor: pointer;
+  }
+}

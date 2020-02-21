@@ -1,1 +1,101 @@
 @import "../../../styles/variables.scss";
+
+.block2 {
+  @include flex;
+  flex-direction: column;
+  padding: 0 var(--primary-p);
+  width: calc(100% - 2 * var(--primary-p));
+  background-color: $white;
+  .tittle {
+    @include flex;
+    margin-top: 60px;
+    width: 295px;
+    height: 70px;
+    font-family: Bebas Neue;
+    font-size: 40px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: #ff3754;
+  }
+  .content {
+    margin: 60px 0;
+    width: 100%;
+    height: var(--content);
+    display: flex;
+    flex-direction: row;
+    .left,
+    .right,
+    center {
+      height: 100%;
+      position: relative;
+    }
+    .left,
+    .right {
+      width: 30px;
+    }
+    .center {
+      width: calc(100% - 2 * 30px);
+    }
+    .left {
+      .rect {
+        &--top,
+        &--bottom,
+        &--side {
+          left: 0;
+        }
+      }
+    }
+    .right {
+      .rect {
+        &--top,
+        &--bottom,
+        &--side {
+          right: 0;
+        }
+      }
+    }
+    .rect {
+      &--top,
+      &--bottom,
+      &--side {
+        position: absolute;
+        top: 0;
+        background: #ff3754;
+      }
+      &--top,
+      &--bottom {
+        height: 30px;
+        width: 52px;
+      }
+      &--bottom {
+        top: var(--content);
+      }
+      &--side {
+        height: var(--content);
+        width: 30px;
+      }
+    }
+  }
+  .pager {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 220px;
+    height: 30px;
+    margin-bottom: 85px;
+    .left,
+    .right {
+      width: 30px;
+      height: 25px;
+    }
+    .center {
+      @include flex;
+      font-family: Museo Sans Cyrl;
+      font-size: 24px;
+      line-height: 29px;
+      height: 100%;
+      width: calc(100% - 2 * 30px);
+    }
+  }
+}

@@ -1,1 +1,16 @@
 @import "./styles/variables.scss";
+
+.app {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  width: 100%;
+  //padding: 0 var(--primary-p);
+  //padding-top: var(--header);
+  // .container {
+  //   &> div {
+  //     width: calc(100% - 2 * var(--primary-p));
+  //     margin: var(--primary-p);
+  //   }
+  // }
+ }
