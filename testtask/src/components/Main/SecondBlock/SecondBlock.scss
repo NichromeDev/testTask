@@ -35,6 +35,102 @@
     }
     .center {
       width: calc(100% - 2 * 30px);
+      padding: 0 90px;
+      display: flex;
+      flex-direction: row;
+      &-r,
+      &-l {
+        @include flex-start;
+        height: 100%;
+        //width: calc(50% - 90px);
+        width: 50%;
+        flex-direction: column;
+      }
+      &-r {
+        align-items: center;
+      }
+      &-l {
+        &-tittle {
+          @include flex-start;
+          flex-direction: column;
+          margin-top: 25px;
+          .spec {
+            //@include flex-start;
+            //flex-direction: row;
+            font-family: Bebas Neue;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+          }
+          .spec1 {
+            font-size: 50px;
+            line-height: 70px;
+            color: #ff3754;
+            margin-bottom: 0;
+          }
+          .spec2 {
+            font-size: 30px;
+            line-height: 40px;
+            color: #888888;
+          }
+          .spec3 {
+            font-family: Museo Sans Cyrl;
+            font-size: 10px;
+            line-height: 16px;
+            letter-spacing: 0.155em;
+            color: #303030;
+          }
+        }
+        ul {
+          @include flex-start;
+          flex-direction: column;
+          padding: 0;
+          margin-bottom: 30px;
+          li {
+            display: flex;
+            flex-direction: row;
+            height: 30px;
+          }
+          .circle {
+            width: 30px;
+            height: 30px;
+            @include flex;
+            align-items: center;
+            justify-content: flex-start;
+            & > div {
+              width: 10px;
+              height: 10px;
+              background: #ff3754;
+              border-radius: 3px;
+            }
+          }
+          span {
+            @include flex;
+            padding-left: 10px;
+            height: 100%;
+            font-family: Museo Sans Cyrl;
+            font-size: 18px;
+            line-height: 160%;
+            color: #303030;
+          }
+        }
+        &-subtitle {
+          @include flex-start;
+          flex-direction: column;
+          margin-bottom: 20px;
+          .head {
+            font-family: Museo Sans Cyrl;
+            font-size: 18px;
+            line-height: 160%;
+            color: #000000;
+          }
+          .desc {
+            font-family: Museo Sans Cyrl;
+            font-size: 16px;
+            line-height: 160%;
+            color: #303030;
+          }
+        }
+      }
     }
     .left {
       .rect {

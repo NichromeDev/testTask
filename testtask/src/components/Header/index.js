@@ -16,7 +16,7 @@ export default () => {
   const [closed, setClosed] = useState(false);
   const close = () => setClosed(!closed);
   return (
-    <header className={closed && "opened"}>
+    <header className={`${closed && "opened"}`}>
       <div className="logo">
         <img src={closed ? logo : closedLogo} alt="logo-1" />
       </div>

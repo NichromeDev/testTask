@@ -41,3 +41,9 @@ $backlight: lighten(#1890ff, 43%);
     justify-content: center;
     align-items: center;
 }
+
+@mixin flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
