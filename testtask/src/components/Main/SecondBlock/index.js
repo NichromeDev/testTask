@@ -4,6 +4,7 @@ import "./SecondBlock.scss";
 
 import leftArrow from "../../../assets/img/left_arrow.png";
 import rightArrow from "../../../assets/img/right_arrow.png";
+import ellipse from "../../../assets/img/ellipse.png";
 
 export default () => {
   return (
@@ -22,6 +23,7 @@ export default () => {
               <span className="spec spec2">Ипсума Анатольевна</span>
               <span className="spec spec3">lorem ipsum dolor</span>
             </div>
+            <div className="center-l-hidden">Скрыть</div>
             <ul>
               <li>
                 <div className="circle">
@@ -75,7 +77,9 @@ export default () => {
               </span>
             </div>
           </div>
-          <div className="center-r"></div>
+          <div className="center-r">
+            <img src={ellipse} alt="ellipse-1" />
+          </div>
         </div>
         <div className="right">
           <div className="rect--top"></div>

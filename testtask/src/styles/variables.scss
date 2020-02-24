@@ -12,9 +12,11 @@ $backlight: lighten(#1890ff, 43%);
 
 :root {
     --primary-p: 92px;
+    --mob-p: 10px;
     --header: 110px;
     --footer: 68px;
-    //--mobHeader: 40px;
+    --mobHeader: 60px;
+    --mobFooter: 60px;
     --logoH: 58px;
     --logoW: 219px;
     --content: 630px;
@@ -36,14 +38,23 @@ $backlight: lighten(#1890ff, 43%);
 
 //mixins
 
-@mixin flex {
+@mixin flex($jc: center, $fld: "", $ai: center) {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $jc;
+    align-items: $ai;
+    @if $fld {
+        flex-direction: $fld;
+    }
 }
 
 @mixin flex-start {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+@mixin background {
+    background-repeat: no-repeat;
+    background-position: center;
+    //background-size: cover;
 }
