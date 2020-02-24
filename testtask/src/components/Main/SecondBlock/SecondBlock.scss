@@ -4,7 +4,7 @@
   @include flex;
   flex-direction: column;
   padding: 0 var(--primary-p);
-  width: calc(100% - 2 * var(--primary-p));
+  width: 100%;
   background-color: $white;
   .tittle {
     margin-top: 60px;
@@ -77,11 +77,7 @@
           }
         }
         &-hidden {
-          height: 40px;
-          background: $white;
-          border: 1px solid #888888;
-          box-sizing: border-box;
-          border-radius: 4px;
+          display: none;
         }
         ul {
           @include flex-start;
@@ -119,7 +115,6 @@
         &-subtitle {
           @include flex-start;
           flex-direction: column;
-          margin-bottom: 20px;
           .head {
             font-family: Museo Sans Cyrl;
             font-size: 18px;
@@ -127,6 +122,7 @@
             color: #000000;
           }
           .desc {
+            margin-bottom: 20px;
             font-family: Museo Sans Cyrl;
             font-size: 16px;
             line-height: 160%;
@@ -199,13 +195,41 @@
   }
 }
 
-@media (min-width: 941px) {
+// @media (max-width: 1166px) {
+//   .block2 {
+//     .content {
+//       height: var(--content);
+//       center {
+//         height: 100%;
+//         position: relative;
+//         &-l {
+//           &-hidden {
+//             display: none;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media (min-width: 941px) and (max-width: 1165px) {
   .block2 {
     .content {
-      height: var(--content);
-      center {
-        height: 100%;
-        position: relative;
+      .center {
+        width: calc(100% - 2 * 30px);
+        padding: 0 60px;
+        &-l {
+          &-subtitle {
+            .head {
+              font-size: 17px;
+              line-height: 140%;
+            }
+            .desc {
+              font-size: 15px;
+              line-height: 120%;
+            }
+          }
+        }
       }
     }
   }
@@ -215,7 +239,6 @@
   $padding: var(--mob-p);
   .block2 {
     padding: 0 $padding;
-    width: calc(100% - 2 * var(--mob-p));
     .tittle {
       margin-top: 20px;
       font-size: 30px;
@@ -224,16 +247,13 @@
     .content {
       margin: 30px 0;
       width: 100%;
-      center {
-        position: relative;
-      }
       .left,
       .right {
         display: none;
       }
       .center {
-        width: calc(100% - 2 * 30px);
-        padding: 0 30px;
+        width: 100%;
+        padding: 0;
         flex-direction: column;
         &-r,
         &-l {
@@ -254,39 +274,39 @@
           order: 2;
           &-tittle {
             margin-top: 15px;
-            .spec {
-              // font-family: Bebas Neue;
-              // text-transform: uppercase;
-              // margin-bottom: 20px;
-            }
+            @include flex;
+            // .spec {
+
+            // }
             .spec1 {
-              // font-size: 50px;
-              // line-height: 70px;
-              // color: #ff3754;
-              // margin-bottom: 0;
+              font-size: 40px;
+              line-height: 40px;
+              margin-bottom: 20px;
             }
             .spec2 {
-              // font-size: 30px;
-              // line-height: 40px;
-              // color: #888888;
+              font-size: 30px;
+              line-height: 30px;
             }
             .spec3 {
-              // font-family: Museo Sans Cyrl;
-              // font-size: 10px;
-              // line-height: 16px;
-              // letter-spacing: 0.155em;
-              // color: #303030;
+              font-size: 15px;
+              line-height: 16px;
+              margin-bottom: 40px;
             }
           }
           &-hidden {
-            display: none;
+            @include flex;
+            height: 40px;
+            width: 150px;
+            background: $white;
+            border: 1px solid #888888;
+            box-sizing: border-box;
+            border-radius: 4px;
+            margin-bottom: 25px;
           }
           ul {
             margin-bottom: 20px;
             li {
-              // display: flex;
-              // flex-direction: row;
-              // height: 30px;
+              margin-bottom: 10px;
             }
             .circle {
               // width: 30px;
@@ -309,8 +329,7 @@
             }
           }
           &-subtitle {
-            margin-bottom: 20px;
-            width: 300px;
+            max-width: 300px;
             .head {
               // font-family: Museo Sans Cyrl;
               // font-size: 18px;

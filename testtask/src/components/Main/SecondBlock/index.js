@@ -69,8 +69,6 @@ export default () => {
                 dolorlorem ipsum dolorlorem ipsum dolorlorem ipsum dolorlorem
                 ipsum dolorlorem ipsum dolorlorem ipsum dolor
               </span>
-            </div>
-            <div className="center-l-subtitle">
               <span className="head">lorem ipsum </span>
               <span className="desc">
                 lorem ipsum dolorlorem ipsum dolorloremr

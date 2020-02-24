@@ -1,27 +1,25 @@
 @import "../../../styles/variables.scss";
 
 .block1 {
-  height: 960px;
+  @include flex-start;
+  flex-direction: column;
   background-image: url("../../../assets/img/bg_1.png");
-  width: calc(100% - 2 * var(--primary-p));
+  width: 100%;
   padding: 0 var(--primary-p);
   .title {
     padding-top: calc(var(--header) + 80px);
-    width: 820px;
-    height: 90px;
     font-family: Bebas Neue;
     font-size: 50px;
     line-height: 90px;
     text-transform: uppercase;
-    color: white;
+    color: $white;
+    margin-bottom: 10px;
   }
   .subtitle {
-    margin-top: 10px;
-    width: 633px;
-    height: 60px;
     font-size: 50px;
     line-height: 60px;
-    color: white;
+    color: $white;
+    margin-bottom: 10px;
     font-family: Bebas Neue;
     span {
       font-family: Museo Sans Cyrl;
@@ -59,7 +57,7 @@
       }
     }
     .col3 {
-      width: 360px;
+      max-width: 360px;
       .row {
         width: 100%;
         display: flex;
@@ -71,7 +69,8 @@
         color: $white;
       }
       .span {
-        width: 300px;
+        padding: 0 10px;
+        max-width: 300px;
         height: 50px;
         background: #ff3754;
         border-radius: var(--b-r);
@@ -104,5 +103,87 @@
     text-transform: uppercase;
     color: $white;
     cursor: pointer;
+  }
+}
+
+@media (min-width: 965px) {
+  .block1 {
+    height: 960px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 965px) {
+  $padding: 40px;
+  .block1 {
+    height: 860px;
+    padding: 0 $padding;
+    .title {
+      font-size: 37px;
+      line-height: 50px;
+    }
+    .subtitle {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+}
+
+@media (max-width: 699px) {
+  $padding: var(--mob-p);
+  .block1 {
+    background-image: none;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    &-top,
+    .table {
+      padding: 0 $padding;
+      width: 100%;
+    }
+    .button {
+      margin: 0 $padding;
+      width: calc(100% - 2 * var(--mob-p));
+    }
+    &-top {
+      order: 1;
+      background-image: url("../../../assets/img/bg_1.png");
+      background-size: cover;
+    }
+    .title {
+      padding-top: calc(var(--mobHeader) + 40px);
+      font-size: 37px;
+      line-height: 50px;
+      margin-bottom: 0;
+    }
+    .subtitle {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    .table {
+      order: 3;
+      margin-top: 30px;
+      .col2 {
+        width: 35px;
+      }
+      .col3 {
+        .row {
+          font-family: Museo Sans Cyrl;
+          font-size: 16px;
+          color: #303030;
+        }
+        .span {
+          height: 37px;
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+    }
+    .button {
+      order: 2;
+      margin-top: 15px;
+      max-width: 400px;
+      height: 60px;
+      justify-content: center;
+    }
   }
 }

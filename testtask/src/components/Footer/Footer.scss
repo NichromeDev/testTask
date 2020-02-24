@@ -1,17 +1,23 @@
 @import "../../styles/variables.scss";
 
 footer {
-  width: calc(100% - 2 * var(--primary-p));
+  width: 100%;
   padding: 0 var(--primary-p);
   height: var(--footer);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #ffffff;
+  background: $white;
   span {
     font-family: Museo Sans Cyrl;
     font-size: 18px;
     line-height: 27px;
+  }
+}
+
+@media (max-width: 800px) {
+  footer {
+    padding: 0 var(--mob-p);
   }
 }

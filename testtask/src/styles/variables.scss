@@ -1,6 +1,6 @@
 $blue: #0e4bef;
 $light: #b3ecff;
-$lightBlue: #d13b40;//#0099ff;
+$lightBlue: #d13b40; //#0099ff;
 $cyan: #00a6d6;
 $materialBlue: rgb(33, 150, 243);
 $purple: orange;
@@ -11,50 +11,48 @@ $grey: #bfbfbf;
 $backlight: lighten(#1890ff, 43%);
 
 :root {
-    --primary-p: 92px;
-    --mob-p: 10px;
-    --header: 110px;
-    --footer: 68px;
-    --mobHeader: 60px;
-    --mobFooter: 60px;
-    --logoH: 58px;
-    --logoW: 219px;
-    --content: 630px;
-    // --padding: 10px;
-    --b-r: 4px;
-    // --m-w: 400px;
-    // --feedback: 70px;
-    // --carousel: 450px;
-    // --presentation: 390px;
-    // --addresses: 450px;
-    // --indent: 1em;
-    //app size
-    // --xl: 1200px;
-    // --l: 1000px;
-    // --m: 780px;
-    // --s: 400px;
-    // --xs: 300px;
+  --primary-p: 92px;
+  --mob-p: 10px;
+  --header: 110px;
+  --footer: 68px;
+  --mobHeader: 60px;
+  --mobFooter: 60px;
+  --logoH: 58px;
+  --logoW: 219px;
+  --content: 630px;
+  // --padding: 10px;
+  --b-r: 4px;
+  // --m-w: 400px;
+  // --feedback: 70px;
+  // --carousel: 450px;
+  // --presentation: 390px;
+  // --addresses: 450px;
+  // --indent: 1em;
+  //app size
+  // --xl: 1200px;
+  // --l: 1000px;
+  // --m: 780px;
+  // --s: 400px;
+  // --xs: 300px;
 }
 
 //mixins
 
-@mixin flex($jc: center, $fld: "", $ai: center) {
-    display: flex;
-    justify-content: $jc;
-    align-items: $ai;
-    @if $fld {
-        flex-direction: $fld;
-    }
+@mixin flex($jc: center, $fld: none, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fld;
 }
 
 @mixin flex-start {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 @mixin background {
-    background-repeat: no-repeat;
-    background-position: center;
-    //background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  //background-size: cover;
 }

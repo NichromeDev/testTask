@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
 
 header {
-  width: calc(100% - 2 * var(--primary-p));
+  width: 100%;
   height: var(--header);
   display: flex;
   flex-direction: row;
@@ -135,7 +135,6 @@ header {
 @media (max-width: 930px) {
   $padding: var(--mob-p);
   header {
-    width: calc(100% - 2 * var(--mob-p));
     height: var(--mobHeader);
     padding: 0 $padding;
     .logo {

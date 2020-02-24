@@ -14,9 +14,11 @@ import col2row4 from "../../../assets/img/col2row4.png";
 export default () => {
   return (
     <div className="block1">
-      <div className="title">lorem ipsum dolor sit amet</div>
-      <div className="subtitle">
-        <span>lorem</span> ipsum dolor sit amet
+      <div className="block1-top">
+        <div className="title">lorem ipsum dolor sit amet</div>
+        <div className="subtitle">
+          <span>lorem</span> ipsum dolor sit amet
+        </div>
       </div>
       <div className="table">
         <div className="col col1">
